@@ -144,7 +144,7 @@ async function geoData() {
       lon: position.coords.longitude,
     };
   });
-  const server = `http://api.openweathermap.org/geo/1.0/reverse?lat=${geoPosition.lat}&lon=${geoPosition.lon}&appid=${APIKEY}`;
+  const server = `https://api.openweathermap.org/geo/1.0/reverse?lat=${geoPosition.lat}&lon=${geoPosition.lon}&appid=${APIKEY}`;
   return await fetch(server, { method: "GET" })
     .then((response) => response.json())
     .then((resultsGeoData) => {
@@ -175,7 +175,7 @@ async function getWeather() {
 			<div class="weather__status">${weatherDescription}</div>
 		  </div>
 		  <div class="weather__icon">
-			<img src="http://openweathermap.org/img/wn/${weatherIcon}.png" alt="${weatherDescription}" />
+			<img src="https://openweathermap.org/img/wn/${weatherIcon}.png" alt="${weatherDescription}" />
 		  </div>
 		</div>
 		<div class="weather__temp"> Temperature: <span id="temp-value"></span> </div>
