@@ -188,39 +188,3 @@ async function getWeather() {
   change();
 }
 init();
-
-// async function loadWeather() {
-// 	const weatherData = await getData();
-// 	weatherBlock.innerHTML = `
-// 	  <div class="weather__loading">
-// 	  <img src="img/loading.svg" alt="Loading...">
-// 	  </div>
-// 	  `;
-// 	console.log(weatherData);
-// 	  const server =
-// 	    "https://api.openweathermap.org/data/2.5/weather?q=Odesa&appid=1777adfd099da3724796805f98c06875&units=metric";
-
-// 	  const response = await fetch(server, { method: "GET" });
-// 	  const responseResult = await response.json();
-
-// 	  localStorage.setItem("weather", JSON.stringify(responseResult));
-// 	  weatherStorage = JSON.parse(localStorage.getItem("weather"));
-// 	  let t = responseResult.dt;
-// 	  console.log(t);
-// 	  let timestamp = weatherStorage.dt;
-// 	  console.log(timestamp);
-// 	  console.log(weatherStorage);
-
-// 	  if (response.ok) {
-// 	    weatherData = responseResult;
-// 	    weatherData.main.temp_farengheit = celToFar(weatherData.main.temp);
-// 	    weatherData.main.feels_like_farengheit = celToFar(
-// 	      weatherData.main.feels_like
-// 	    );
-// 	    weatherData.main.temp = Math.round(weatherData.main.temp);
-// 	    weatherData.main.feels_like = Math.round(weatherData.main.feels_like);
-// 	    getWeather();
-// 	  } else {
-// 	    weatherBlock.innerHTML = responseResult.message;
-// 	  }
-//   }
